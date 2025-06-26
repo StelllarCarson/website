@@ -1,13 +1,7 @@
 # website
- 
-# website
- <!DOCTYPYE html>
-<html lang="en">
-<head>
-<title> Forgotten Gems for the DS </title>
-</head>
-<body>
-<h1> My DS Memories. <h1>
-<p> welcome to my new website im still wprking on it.  </p>
-<
-<
+
+# Forgotten Gems for the DS
+
+My personal site about underrated Nintendo DS titles.
+
+👉 Site lives at index.html—check out the source for my first page!
