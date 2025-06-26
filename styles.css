@@ -1,0 +1,19 @@
+/* Set a light background & readable font */
+body {
+  background-color: #fafafa;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 2rem;
+}
+
+/* Style your headings */
+h1 {
+  color: #333;
+  font-size: 2rem;
+}
+
+/* Tweak your paragraph text */
+p {
+  color: #555;
+  line-height: 1.5;
+}
