@@ -71,3 +71,17 @@ body {
   margin-left: 12px;
   text-decoration: none;
 } 
+@media (min-width: 800px) {
+  .pixel-gallery {
+    max-width: 300px;  /* tighten it up on desktop */
+  }
+}
+.pixel-gallery {
+  display: grid;
+  grid-template-columns: 1fr;      /* one column only */
+  row-gap: 1rem;                   /* vertical spacing */
+  max-width: 500px;                /* optional cap on width */
+  margin: 0 auto;                  /* center on page */
+}
+
+
