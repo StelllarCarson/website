@@ -93,6 +93,19 @@ body {
     max-width: 300px; /* tighter cap on desktop */
   }
 }
+.game-grid {
+  display: grid;
+  /* Start with one column by default */
+  grid-template-columns: 1fr;
+  /* space between cards */
+  gap: 1.5rem;
+}
+@media (min-width: 700px) {
+  .game-grid {
+    /* Two equal-width columns, with a single gutter between them */
+    grid-template-columns: 1fr 1fr;
+  }
+}
 .mb-10 { margin-bottom: 10px; }
 .rounded { border-radius: var(--radius); }
 .p-12-20 { padding: 12px 20px; }
