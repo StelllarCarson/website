@@ -49,6 +49,11 @@ body {
   padding: 12px 20px;
   background: linear-gradient(135deg, #6a0dad 0%, #001f3f 100%);
   border-bottom: 3px solid var(--blue-accent);
+}.logo {
+  font-family: 'Press Start 2P', cursive;
+  font-size: var(--font-large);
+  color: var(--blue-accent);
+  margin-left: 12px;
 }
 .banner-img {
   flex: 1 1 100%;
