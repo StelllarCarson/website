@@ -36,7 +36,6 @@ body {
   line-height: 1.6;
 }
 
-/* High-Contrast Mode (optional) */
 /*
 body.high-contrast {
   --bg-dark1: #000;
@@ -124,22 +123,21 @@ body.high-contrast {
   pointer-events: none;
   background: linear-gradient(rgba(0,0,0,0.03) 0%, rgba(0,0,0,0.06) 100%);
   z-index: 9999;
-  /* Optional: to reduce impact if unused, move to separate file */
 }
 
 /* ===============================
    Pixel Gallery
    =============================== */
 .pixel-gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Responsive columns */
+display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); 
   gap: 1rem;
   max-width: 500px;
   margin: 0 auto;
 }
 @media (min-width: 800px) {
   .pixel-gallery {
-    max-width: 300px; /* tighter cap on desktop */
+    max-width: 300px; 
   }
 }
 
@@ -148,13 +146,12 @@ body.high-contrast {
    =============================== */
 .game-grid {
   display: grid;
-  grid-template-columns: 1fr; /* Start with one column by default */
+  grid-template-columns: 1fr;
   gap: 1.5rem;
 }
 @media (min-width: 700px) {
   .game-grid {
-    grid-template-columns: 1fr 1fr; /* Two equal-width columns */
-  }
+    grid-template-columns: 1fr 1fr; 
 }
 
 /* ===============================
@@ -177,7 +174,7 @@ strong, #strong {
   font-weight: bold;
 }
 .pixel-gallery {
-}border: 14px solid #4F3398;
+border: 14px solid #4F3398;
 box-shadow:
   0 0 0 23px #25204e,
   0 0 0 36px #9B9EBE,
@@ -186,4 +183,5 @@ border-radius: 28px;
    margin: 38px;
 min-height: calc(100vh - 76px);
 background-clip: padding-box;
-box-sizing: border-box;}
+box-sizing: border-box;
+}
