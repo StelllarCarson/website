@@ -92,7 +92,7 @@ body.high-contrast {
   max-height: 100%;
   margin: auto;
   display: block;
-
+}
 
 /* ===============================
    Navigation
@@ -129,11 +129,21 @@ body.high-contrast {
    Pixel Gallery
    =============================== */
 .pixel-gallery {
-display: grid;
+  display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); 
   gap: 1rem;
   max-width: 500px;
   margin: 0 auto;
+  border: 14px solid #4F3398;
+  box-shadow:
+    0 0 0 23px #25204e,
+    0 0 0 36px #9B9EBE,
+    0 0 60px 18px #00000060;
+  border-radius: 28px;
+  margin: 38px;
+  min-height: calc(100vh - 76px);
+  background-clip: padding-box;
+  box-sizing: border-box;
 }
 @media (min-width: 800px) {
   .pixel-gallery {
@@ -152,6 +162,7 @@ display: grid;
 @media (min-width: 700px) {
   .game-grid {
     grid-template-columns: 1fr 1fr; 
+  }
 }
 
 /* ===============================
@@ -172,16 +183,4 @@ em {
 strong, #strong {
   color: var(--blue-accent);
   font-weight: bold;
-}
-.pixel-gallery {
-border: 14px solid #4F3398;
-box-shadow:
-  0 0 0 23px #25204e,
-  0 0 0 36px #9B9EBE,
-  0 0 60px 18px #00000060;
-border-radius: 28px;
-   margin: 38px;
-min-height: calc(100vh - 76px);
-background-clip: padding-box;
-box-sizing: border-box;
 }
