@@ -118,5 +118,26 @@ body.high-contrast {
 .animated {
   transition: all var(--transition-slow) cubic-bezier(.42,0,.58,1);
 }
+h2 {
+  font-weight: 700;
+}em {
+  font-style: italic;
+}
+em {
+  font-size: 16px;
+  margin-top: 5%;
+  line-height: 1.2em;
+}strong {
+  color: var(--blue-accent);
+}
+#strong {
+  font-weight: bold;
+}body {
+  line-height: 1.6;
+}h1 {
+  text-align: center;
+
+
+
 
 
