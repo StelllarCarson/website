@@ -1,4 +1,6 @@
-
+/* ===============================
+   Reset and Base Variables
+   =============================== */
 * {
   margin: 0;
   padding: 0;
@@ -18,6 +20,10 @@
   --transition-fast: 0.2s;
   --transition-slow: 0.3s;
 }
+
+/* ===============================
+   Body and Global Styles
+   =============================== */
 body {
   font-family: 'Segoe UI', sans-serif;
   color: var(--text-light);
@@ -29,18 +35,29 @@ body {
     linear-gradient(135deg, var(--bg-dark1) 0%, var(--bg-dark2) 100%);
   line-height: 1.6;
 }
-.crt-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  /* Subtle scanline effect */
-  background: linear-gradient(rgba(0,0,0,0.03) 0%, rgba(0,0,0,0.06) 100%);
-  z-index: 9999;
-  /* Optional: to reduce impact if unused, move to separate file */
+
+/* High-Contrast Mode (optional) */
+/*
+body.high-contrast {
+  --bg-dark1: #000;
+  --bg-dark2: #222;
+  --text-light: #fff;
 }
+*/
+
+/* ===============================
+   Utility Classes
+   =============================== */
+.mb-10 { margin-bottom: 10px; }
+.rounded { border-radius: var(--radius); }
+.p-12-20 { padding: 12px 20px; }
+.animated {
+  transition: all var(--transition-slow) cubic-bezier(.42,0,.58,1);
+}
+
+/* ===============================
+   Header & Logo
+   =============================== */
 #page-header {
   display: flex;
   flex-wrap: wrap;
@@ -49,12 +66,17 @@ body {
   padding: 12px 20px;
   background: linear-gradient(135deg, #6a0dad 0%, #001f3f 100%);
   border-bottom: 3px solid var(--blue-accent);
-}.logo {
+}
+.logo {
   font-family: 'Press Start 2P', cursive;
   font-size: var(--font-large);
   color: var(--blue-accent);
   margin-left: 12px;
 }
+
+/* ===============================
+   Banner Image
+   =============================== */
 .banner-img {
   flex: 1 1 100%;
   max-width: 100%;
@@ -62,13 +84,14 @@ body {
   margin-bottom: 10px;
   transition: transform var(--transition-slow) cubic-bezier(.42,0,.58,1);
 }
-.banner-img:hover, .banner-img:focus {
+.banner-img:hover,
+.banner-img:focus {
   transform: scale(1.05);
 }
-  font-family: 'Press Start 2P', cursive;
-  color: #cba6fa;
-  font-size: var(--font-large);
-}
+
+/* ===============================
+   Navigation
+   =============================== */
 .main-nav a {
   margin-left: 12px;
   text-decoration: none;
@@ -77,10 +100,30 @@ body {
   transition: color var(--transition-fast);
   outline: none;
 }
-.main-nav a:focus, .main-nav a:hover {
+.main-nav a:focus,
+.main-nav a:hover {
   color: var(--blue-accent);
   text-decoration: underline;
 }
+
+/* ===============================
+   CRT Overlay
+   =============================== */
+.crt-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  background: linear-gradient(rgba(0,0,0,0.03) 0%, rgba(0,0,0,0.06) 100%);
+  z-index: 9999;
+  /* Optional: to reduce impact if unused, move to separate file */
+}
+
+/* ===============================
+   Pixel Gallery
+   =============================== */
 .pixel-gallery {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Responsive columns */
@@ -93,51 +136,37 @@ body {
     max-width: 300px; /* tighter cap on desktop */
   }
 }
+
+/* ===============================
+   Game Grid
+   =============================== */
 .game-grid {
   display: grid;
-  /* Start with one column by default */
-  grid-template-columns: 1fr;
-  /* space between cards */
+  grid-template-columns: 1fr; /* Start with one column by default */
   gap: 1.5rem;
 }
 @media (min-width: 700px) {
   .game-grid {
-    /* Two equal-width columns, with a single gutter between them */
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr; /* Two equal-width columns */
   }
 }
-.mb-10 { margin-bottom: 10px; }
-.rounded { border-radius: var(--radius); }
-.p-12-20 { padding: 12px 20px; }
-/* Uncomment for high-contrast mode:
-body.high-contrast {
-  --bg-dark1: #000;
-  --bg-dark2: #222;
-  --text-light: #fff;
-}
-.animated {
-  transition: all var(--transition-slow) cubic-bezier(.42,0,.58,1);
+
+/* ===============================
+   Typography
+   =============================== */
+h1 {
+  text-align: center;
 }
 h2 {
   font-weight: 700;
-}em {
-  font-style: italic;
 }
 em {
+  font-style: italic;
   font-size: 16px;
   margin-top: 5%;
   line-height: 1.2em;
-}strong {
-  color: var(--blue-accent);
 }
-#strong {
+strong, #strong {
+  color: var(--blue-accent);
   font-weight: bold;
-}body {
-  line-height: 1.6;
-}h1 {
-  text-align: center;
-
-
-
-
-
+}
