@@ -176,3 +176,6 @@ strong, #strong {
   color: var(--blue-accent);
   font-weight: bold;
 }
+.pixel-gallery {
+  border: 2px wavy #333;
+}
