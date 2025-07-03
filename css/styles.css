@@ -178,4 +178,14 @@ strong, #strong {
 }
 .pixel-gallery {
   border: 2px wavy #333;
-}
+}border: 14px solid #4F3398;
+box-shadow:
+  0 0 0 23px #25204e,
+  0 0 0 36px #9B9EBE,
+  0 0 60px 18px #00000060;
+border-radius: 28px;
+   margin: 38px;
+min-height: calc(100vh - 76px);
+background-clip: padding-box;
+box-sizing: border-box;
+body::before, body::after { ... }
