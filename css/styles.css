@@ -25,24 +25,15 @@
    Body and Global Styles
    =============================== */
 body {
-  font-family: 'Segoe UI', sans-serif;
+  font-family: 'Press Start 2P', monospace;
   color: var(--text-light);
   min-height: 100vh;
-  /* Layered gradients for retro swirl vibes */
+  line-height: 1.6;
   background:
     radial-gradient(circle at 20% 30%, var(--purple2), transparent 40%),
     radial-gradient(circle at 80% 70%, rgba(0, 31, 63, 0.3), transparent 50%),
     linear-gradient(135deg, var(--bg-dark1) 0%, var(--bg-dark2) 100%);
-  line-height: 1.6;
 }
-
-/*
-body.high-contrast {
-  --bg-dark1: #000;
-  --bg-dark2: #222;
-  --text-light: #fff;
-}
-*/
 
 /* ===============================
    Utility Classes
@@ -52,6 +43,9 @@ body.high-contrast {
 .p-12-20 { padding: 12px 20px; }
 .animated {
   transition: all var(--transition-slow) cubic-bezier(.42,0,.58,1);
+}
+.pixel-text {
+  font-family: 'Press Start 2P', monospace;
 }
 
 /* ===============================
@@ -133,14 +127,13 @@ body.high-contrast {
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); 
   gap: 1rem;
   max-width: 500px;
-  margin: 0 auto;
+  margin: 38px auto;
   border: 14px solid #4F3398;
   box-shadow:
     0 0 0 23px #25204e,
     0 0 0 36px #9B9EBE,
     0 0 60px 18px #00000060;
   border-radius: 28px;
-  margin: 38px;
   min-height: calc(100vh - 76px);
   background-clip: padding-box;
   box-sizing: border-box;
@@ -183,47 +176,19 @@ em {
 strong, #strong {
   color: var(--blue-accent);
   font-weight: bold;
-}.pixel-brick-border {
-  border: 8px solid transparent;
-  padding: 16px;
-  border-image: repeating-linear-gradient(
-    90deg,
-    #b22222 0 16px,      /* Brick color */
-    #8b1a1a 16px 20px    /* Mortar/gap */
-  ) 8;
-  border-radius: 0;      /* Keep edges sharp for pixel style */
-}
-body {
-  font-family: 'Press Start 2P', monospace;
-}.pixel-text {
-  font-family: 'Press Start 2P', monospace;
-}.vortex-bg {
-  position: fixed;
-  inset: 0;
-  z-index: -1;
-  pointer-events: none;
-  background:
-    repeating-conic-gradient(from 0deg, #6a0dad 0 20deg, #1f2833 20deg 40deg, #81d4fa 40deg 60deg, transparent 60deg 80deg),
-    radial-gradient(circle at 50% 50%, rgba(106,13,173,0.2) 0%, transparent 70%);
-  animation: spinVortex 10s linear infinite;
-  opacity: 0.55;
 }
 
-@keyframes spinVortex {
-  100% {
-    transform: rotate(360deg);
-  }
-}body {
-  font-family: 'Press Start 2P', monospace;
-}
+/* ===============================
+   Pixel Brick Border
+   =============================== */
 .pixel-brick-border {
   border: 10px solid transparent;
   padding: 20px;
   border-image: repeating-linear-gradient(
     90deg,
-    #b22222 0 18px,             /* Main brick red */
-    #a01f1f 18px 22px,          /* Slightly darker for mortar/shadow */
-    #b22222 22px 40px           /* Repeat brick */
+    #b22222 0 18px,      /* Brick */
+    #a01f1f 18px 22px,   /* Mortar/shadow */
+    #b22222 22px 40px    /* Repeat brick */
   ) 10;
   background: 
     repeating-linear-gradient(
@@ -242,7 +207,12 @@ body {
   box-shadow:
     0 2px 22px 2px #81d4fa, 
     0 0 0 7px #6a0dad50 inset;
-}.vortex-bg {
+}
+
+/* ===============================
+   Vortex Background
+   =============================== */
+.vortex-bg {
   position: fixed;
   inset: 0;
   z-index: -1;
