@@ -193,3 +193,26 @@ strong, #strong {
   ) 8;
   border-radius: 0;      /* Keep edges sharp for pixel style */
 }
+body {
+  font-family: 'Press Start 2P', monospace;
+}.pixel-text {
+  font-family: 'Press Start 2P', monospace;
+}.vortex-bg {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background:
+    repeating-conic-gradient(from 0deg, #6a0dad 0 20deg, #1f2833 20deg 40deg, #81d4fa 40deg 60deg, transparent 60deg 80deg),
+    radial-gradient(circle at 50% 50%, rgba(106,13,173,0.2) 0%, transparent 70%);
+  animation: spinVortex 10s linear infinite;
+  opacity: 0.55;
+}
+
+@keyframes spinVortex {
+  100% {
+    transform: rotate(360deg);
+  }
+}body {
+  font-family: 'Press Start 2P', monospace;
+}
