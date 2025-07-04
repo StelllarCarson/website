@@ -183,4 +183,13 @@ em {
 strong, #strong {
   color: var(--blue-accent);
   font-weight: bold;
+}.pixel-brick-border {
+  border: 8px solid transparent;
+  padding: 16px;
+  border-image: repeating-linear-gradient(
+    90deg,
+    #b22222 0 16px,      /* Brick color */
+    #8b1a1a 16px 20px    /* Mortar/gap */
+  ) 8;
+  border-radius: 0;      /* Keep edges sharp for pixel style */
 }
